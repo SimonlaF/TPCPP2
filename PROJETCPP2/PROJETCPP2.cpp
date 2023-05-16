@@ -8,16 +8,15 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 #include <iostream>
-
+#include"TailleFenetre.h"
+#include"Rectangle.h"
 
 int main()
 {
-	cv::Mat image(500, 500, CV_8UC3, cv::Scalar(255, 255, 255));
-	cv::Rect rect(50, 50, 50, 50);
-	cv::Point pt1(50, 50);
-	cv::Point pt2(100, 100);
-	cv::rectangle(image, pt1, pt2, cv::Scalar(0, 255, 0));
-	imshow("output", image);
+	// Concocting of the rectangle with the classes
+	TailleFenetre Fenetre1(0, 255, 0, 700, 500);
+	Rectangle Rectangle1(255, 255, 500, 500, 255, 0, 0);
+	Rectangle1.Display(Fenetre1.Display());
 	cv::waitKey(0);
 
 	// Concocting of the circle (giga swag chad sigma)

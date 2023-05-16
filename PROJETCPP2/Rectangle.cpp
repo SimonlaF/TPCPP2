@@ -17,5 +17,7 @@ void Rectangle::Display(cv::Mat _image)
 {
 	cv::Point pt1(xpt1, ypt1);
 	cv::Point pt2(xpt2, ypt2);
-	cv::rectangle(_image, pt1, pt2, cv::Scalar(red, green, blue));
+	cv::rectangle(_image, pt1, pt2, cv::Scalar(blue,green, red));
+	cv::imshow("output", _image);
+
 }

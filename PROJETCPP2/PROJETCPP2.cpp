@@ -10,6 +10,7 @@
 #include <iostream>
 #include"TailleFenetre.h"
 #include"Rectangle.h"
+#include"Cercle.h"
 
 int main()
 {
@@ -19,19 +20,10 @@ int main()
 	Rectangle1.Display(Fenetre1.Display());
 	cv::waitKey(0);
 
-	// Concocting of the circle (giga swag chad sigma)
+	// Concocting of the circle 
 
-	cv::Mat whiteMatrix(200, 200, CV_8UC3, cv::Scalar(255, 255, 255));//Declaring a white matrix
-	cv::Point center(100, 100);//Declaring the center point
-	int radius = 50; //Declaring the radius
-	cv::Scalar line_Color(0, 0, 0);//Color of the circle
-	int thickness = 2;//thickens of the line
-	cv::namedWindow("whiteMatrix");//Declaring a window to show the circle
-	circle(whiteMatrix, center, radius, line_Color, thickness);//Using circle()function to draw the line//
-	imshow("WhiteMatrix", whiteMatrix);//Showing the circle//
-	cv::waitKey(0);//Waiting for Keystroke//
-
-
+	Cercle Cercle1(100, 100, 10, 255, 0, 0, 5);
+	Cercle1.Display(Fenetre1.Display());
 	return 0;
 }
 

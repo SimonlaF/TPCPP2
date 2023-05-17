@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Rectangle.h"
+#include "Droite.h"
 
 
 Rectangle::Rectangle(int _xpt1, int _ypt1, int _xpt2, int _ypt2, int _red, int _green, int _blue)

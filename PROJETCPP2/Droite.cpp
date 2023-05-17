@@ -1,0 +1,23 @@
+//
+// Created by Faniry Andriamasinoro on 17/05/2023.
+//
+
+#include "Droite.h"
+
+Droite::Droite(int _xpt1, int _ypt1, int _xpt2, int _ypt2, int _red, int _green, int _blue) {
+    xpt1 = _xpt1;
+    ypt1 = _ypt1;
+    xpt2 = _xpt2;
+    ypt2 = _ypt2;
+
+    red = _red;
+    green = _green;
+    blue = _blue;
+}
+
+void Droite::Display(cv::Mat _image) {
+    cv::Point pt1(xpt1, ypt1);
+    cv::Point pt2(xpt2, ypt2);
+    cv::line(_image, pt1, pt2, cv::Scalar(blue,green, red));
+    cv::imshow("output", _image);
+}
